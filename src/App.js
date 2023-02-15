@@ -56,23 +56,24 @@ function App() {
     alert(`Horas Trabalhadas: ${horaTrabalhada}`);
   }
   return (
-    <div className="App">
-      <div className='grid-cols-3'>
+    <div className="bg-slate-600 flex justify-center h-screen flex-col">
+      <div className='flex space-x-4 justify-center content-center'>
         <div>
-        <h3>Inicio</h3>
+        <h3 className='text-white'>Inicio</h3>
         <input className='border-2 border-black text-right' type='time' value={hora1} onChange={event=>setHora1(event.target.value)}></input>
         </div>
         <div>
-        <h3>Pausa</h3>
+        <h3 className='text-white'>Pausa</h3>
         <input className='border-2 border-black text-right' type='time' value={hora2} onChange={event=>setHora2(event.target.value)}></input>
         </div>
         <div>
-        <h3>Retorno</h3>
+        <h3 className='text-white'>Retorno</h3>
         <input className='border-2 border-black text-right' type='time' value={hora3} onChange={event=>setHora3(event.target.value)}></input>
         </div>
       </div>
-      <button onClick={alerta}>Clicar</button>
-
+      <div className='flex justify-center content-center'>
+        <button onClick={alerta} className=' border-2 bg-white my-4 px-6'>Calcular</button>
+      </div>
     </div>
   );
 }
